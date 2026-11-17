@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ajukas.logitech",
+  "name": "Logitech",
+  "version": "1.0.0",
+  "author": "ajukas",
+  "license": "MIT",
+  "description": "Gerencia mouse, headset e webcam Logitech: bateria, DPI, sidetone, áudio e imagem da câmera",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Logitech",
+    "description": "Bateria e ajustes do mouse, headset e webcam Logitech",
+    "category": "Devices",
+    "aliases": ["logitech", "mouse", "dpi", "headset", "fone", "sidetone", "webcam", "camera", "câmera", "bateria"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshSec": 60,
+      "lowBattery": 10,
+      "autoApplyCamera": true
+    },
+    "schema": [
+      { "key": "refreshSec", "type": "integer", "min": 10, "max": 3600, "label": "Atualizar a cada (segundos)" },
+      { "key": "lowBattery", "type": "integer", "min": 0, "max": 50, "label": "Avisar com bateria abaixo de (%; 0 desliga)" },
+      { "key": "autoApplyCamera", "type": "boolean", "label": "Reaplicar ajustes da câmera ao conectar" }
+    ]
+  }
+}
